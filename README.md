@@ -1,5 +1,4 @@
-# DX-Academy
-DX Academy – radiokurs och verktyg
+
 # DX Academy
 
 Är en interaktiv utbildning i DX-ing (lyssna på radiosignaler från hela världen).
