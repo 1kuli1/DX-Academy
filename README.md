@@ -2,7 +2,7 @@
 DX Academy – radiokurs och verktyg
 # DX Academy
 
-En interaktiv utbildning i DX-ing (lyssna på radiosignaler från hela världen).
+Är en interaktiv utbildning i DX-ing (lyssna på radiosignaler från hela världen).
 
 ## 🌍 Vad är DX-ing?
 DX-ing betyder att lyssna på radiostationer långt bort från där du befinner dig.
