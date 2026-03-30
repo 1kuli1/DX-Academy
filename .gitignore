@@ -1,0 +1,14 @@
+# Systemfiler
+.DS_Store
+Thumbs.db
+
+# Editorfiler
+.vscode/
+.idea/
+
+# Temporära filer
+*.log
+*.tmp
+
+# Backupfiler
+*~
