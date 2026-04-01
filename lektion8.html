@@ -2,15 +2,159 @@
 <html lang="sv">
 <head>
 <meta charset="UTF-8">
-<title>Lektion 8</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 8 - Waterfall V2</title>
+
 <style>
-body{font-family:Arial;background:#0b0f1a;color:white;padding:20px;}
-h1{color:#eab308;}
+body {
+    font-family: Arial, sans-serif;
+    background: #0b0f1a;
+    color: white;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.section {
+    background: #111827;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+h1, h2 {
+    color: #eab308;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: none;
+    background: #eab308;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.back {
+    background:#374151;
+    color:white;
+    margin-bottom:15px;
+}
+
+.diagram {
+    background:#020617;
+    border-radius:15px;
+    padding:15px;
+    overflow-x:auto;
+}
 </style>
 </head>
+
 <body>
-<h1>Lektion 8</h1>
-<p>Här kommer innehållet för lektion 8.</p>
-<a href="../index.html">⬅ Tillbaka</a>
+
+<div class="container">
+
+<button class="back" onclick="window.location.href='https://classroom.google.com/c/ODUwMTY5MDUwODU2'">
+⬅ Tillbaka till Classroom
+</button>
+
+<h1>📡 Lektion 8 – Waterfall (Fördjupning)</h1>
+
+<div class="section">
+<h2>👁️ Läs en waterfall som ett proffs</h2>
+
+<p>
+Nu ska du inte bara se signaler – du ska förstå vad de betyder.
+</p>
+
+<p>
+Den här bilden visar flera olika typer av signaler samtidigt.
+</p>
+</div>
+
+<div class="section">
+<div class="diagram">
+
+<svg width="950" height="650">
+
+<!-- Bakgrund -->
+<rect x="0" y="0" width="950" height="650" fill="#020617"/>
+
+<!-- Stark AM -->
+<rect x="200" y="50" width="20" height="550" fill="#facc15"/>
+<rect x="190" y="50" width="40" height="550" fill="#f97316" opacity="0.3"/>
+
+<!-- Svag signal -->
+<line x1="120" y1="50" x2="120" y2="600" stroke="#22d3ee" stroke-width="1" opacity="0.3"/>
+
+<!-- Två stationer nära -->
+<line x1="300" y1="50" x2="300" y2="600" stroke="#a78bfa" stroke-width="2"/>
+<line x1="310" y1="50" x2="310" y2="600" stroke="#a78bfa" stroke-width="2"/>
+
+<!-- Fading -->
+<line x1="450" y1="50" x2="450" y2="150" stroke="#22d3ee" stroke-width="2" opacity="0.2"/>
+<line x1="450" y1="150" x2="450" y2="250" stroke="#22d3ee" stroke-width="4" opacity="1"/>
+<line x1="450" y1="250" x2="450" y2="350" stroke="#22d3ee" stroke-width="1" opacity="0.3"/>
+<line x1="450" y1="350" x2="450" y2="450" stroke="#22d3ee" stroke-width="4" opacity="1"/>
+<line x1="450" y1="450" x2="450" y2="600" stroke="#22d3ee" stroke-width="2" opacity="0.2"/>
+
+<!-- Överstyrning -->
+<rect x="550" y="50" width="30" height="550" fill="#ffffff"/>
+
+<!-- Brusgolv -->
+<rect x="0" y="50" width="950" height="550" fill="#0ea5e9" opacity="0.08"/>
+
+<!-- Störning -->
+<rect x="650" y="50" width="80" height="550" fill="#ef4444" opacity="0.2"/>
+
+<!-- Texter -->
+<text x="180" y="30" fill="yellow">Stark AM-signal</text>
+<text x="90" y="30" fill="lightblue">Svag signal</text>
+<text x="280" y="620" fill="violet">Två stationer</text>
+<text x="430" y="30" fill="cyan">Fading</text>
+<text x="540" y="30" fill="white">Överstyrning</text>
+<text x="700" y="30" fill="red">Störning</text>
+<text x="20" y="640" fill="lightblue">Brusgolv</text>
+
+</svg>
+
+</div>
+</div>
+
+<div class="section">
+<h2>📡 Vad betyder detta?</h2>
+
+<p>
+👉 Stark signal = tydlig och bred  
+👉 Svag signal = tunn och svår att se  
+👉 Två nära = risk att de stör varandra  
+👉 Fading = signalen "andas"  
+👉 Överstyrning = för stark signal (problem)  
+👉 Brusgolv = bakgrundsnivå  
+👉 Störning = oönskat brus  
+</p>
+</div>
+
+<div class="section">
+<h2>🎯 Uppgifter</h2>
+
+<p>1. Hitta en stark signal i verkligheten.</p>
+<p>2. Hitta en svag signal.</p>
+<p>3. Kan du se två stationer nära varandra?</p>
+
+</div>
+
+<button class="back" onclick="window.location.href='https://classroom.google.com/c/ODUwMTY5MDUwODU2'">
+⬅ Tillbaka till Classroom
+</button>
+
+</div>
+
 </body>
 </html>
