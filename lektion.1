@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>DX Academy – Lektion 1</title>
+
+<style>
+body {
+  font-family: Arial;
+  background:#0f172a;
+  color:white;
+  padding:20px;
+}
+
+.container {
+  max-width:800px;
+  margin:auto;
+}
+
+h1, h2 {
+  color:#38bdf8;
+}
+
+.card {
+  background:#1e293b;
+  padding:20px;
+  border-radius:12px;
+  margin-top:20px;
+}
+
+button {
+  width:100%;
+  padding:15px;
+  margin-top:10px;
+  border-radius:10px;
+  border:none;
+  background:#38bdf8;
+  font-weight:bold;
+  font-size:16px;
+}
+
+.link-btn {
+  display:block;
+  text-align:center;
+  background:#22c55e;
+  padding:15px;
+  border-radius:10px;
+  margin-top:15px;
+  text-decoration:none;
+  color:black;
+  font-weight:bold;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🎧 DX Academy – Lektion 1</h1>
+
+<div class="card">
+<h2>🌍 Vad är DX?</h2>
+<p>
+DX är konsten att lyssna på radiosignaler från långa avstånd.
+Det handlar om nyfikenhet, tålamod och upptäckarglädje.
+</p>
+</div>
+
+<div class="card">
+<h2>📡 Starta mottagaren</h2>
+
+<a class="link-btn" href="http://sa4bna.hopto.org:8073/" target="_blank">
+👉 Öppna SDR-mottagare (Arvika)
+</a>
+
+</div>
+
+<div class="card">
+<h2>📻 Långvåg</h2>
+
+<button onclick="setFreq(198)">Lyssna på 198 kHz</button>
+<button onclick="setFreq(225)">Lyssna på 225 kHz</button>
+<button onclick="setFreq(183)">Lyssna på 183 kHz</button>
+
+</div>
+
+<div class="card">
+<h2>📻 Mellanvåg</h2>
+
+<button onclick="setFreq(693)">Lyssna på 693 kHz</button>
+<button onclick="setFreq(855)">Lyssna på 855 kHz</button>
+<button onclick="setFreq(756)">Lyssna på 756 kHz</button>
+
+</div>
+
+<div class="card">
+<h2>🌍 Kortvåg</h2>
+
+<button onclick="setFreq(6030)">Lyssna på 6030 kHz</button>
+<button onclick="setFreq(6175)">Lyssna på 6175 kHz</button>
+<button onclick="setFreq(6070)">Lyssna på 6070 kHz</button>
+
+</div>
+
+<div class="card">
+<h2>🧠 Uppgift</h2>
+
+<p>
+När du har lyssnat:
+<br><br>
+- Vad hörde du?<br>
+- Vilken frekvens?<br>
+- Vilken tid (UTC)?<br>
+- Hur kändes det?
+</p>
+
+</div>
+
+</div>
+
+<script>
+// enkel funktion för att visa vald frekvens
+function setFreq(freq){
+  alert("Ställ in frekvens: " + freq + " kHz i mottagaren");
+}
+</script>
+
+</body>
+</html>
