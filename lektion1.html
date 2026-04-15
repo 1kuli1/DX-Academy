@@ -4,12 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>DX Academy – UPPGIFT 1</title>
+<title>DX Academy – Uppgift 1</title>
 
 <style>
 body {
     font-family: Arial, sans-serif;
-    background: #0b0f14; /* samma mörka som övriga */
+    background: #020617; /* mörkare bakgrund */
     color: white;
     margin: 0;
     padding: 20px;
@@ -21,28 +21,28 @@ body {
     margin: auto;
 }
 
-/* Rubriker */
-h1 {
-    text-align: center;
-    color: #38bdf8;
-}
-
-h2 {
-    color: #facc15; /* GUL istället för grön */
-    margin-top: 30px;
+/* HEADER */
+.header {
+    font-size: 34px;
+    font-weight: bold;
+    color: #facc15;
+    margin-bottom: 30px;
 }
 
 /* Kort */
 .card {
-    background: #111821;
-    padding: 20px;
-    border-radius: 12px;
-    margin-top: 20px;
+    background: #0f172a;
+    padding: 25px;
+    border-radius: 20px;
+    margin-bottom: 25px;
+    line-height: 1.7;
 }
 
-/* Text */
-p {
-    line-height: 1.6;
+/* Sektionstitel */
+.section-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
 }
 
 /* Lista */
@@ -50,21 +50,26 @@ ul {
     padding-left: 20px;
 }
 
+/* Emojis spacing */
+.line {
+    margin-bottom: 10px;
+}
+
 /* Knapp */
 button {
     width: 100%;
-    padding: 14px;
-    margin-top: 20px;
+    padding: 16px;
+    border-radius: 12px;
     border: none;
-    border-radius: 10px;
-    background: #facc15; /* GUL knapp */
+    background: #facc15;
     color: black;
+    font-size: 16px;
     font-weight: bold;
     cursor: pointer;
 }
 
 button:hover {
-    background: #fde047; /* ljusare gul hover */
+    background: #fde047;
 }
 </style>
 </head>
@@ -73,48 +78,42 @@ button:hover {
 
 <div class="container">
 
-<h1>Lektion 1 – Introduktion till DX</h1>
-
-<div class="card">
-<h2>Vad du ska lära dig</h2>
-<ul>
-<li>Vad DX är</li>
-<li>Hur du lyssnar på radio</li>
-<li>Vad en frekvens är</li>
-</ul>
+<div class="header">
+📡 UPPGIFT 1 – Introduktion till DX
 </div>
 
 <div class="card">
-<h2>Vad är DX?</h2>
-<p>
-DX betyder att lyssna på radiosignaler från långt bort.
-Ju längre bort signalen kommer ifrån – desto bättre DX.
-</p>
+<p>DX betyder att lyssna på radiosignaler från långt bort.</p>
+
+<p>Ju längre bort signalen kommer ifrån – desto bättre DX.</p>
+
+<p>Tänk dig radio som en värld du kan upptäcka med öronen.</p>
+
+<p>Varje station du hittar är som ett nytt land.</p>
 </div>
 
 <div class="card">
-<h2>Din första uppgift</h2>
-<p>
-Öppna en SDR-mottagare och lyssna på en station.
-Försök hitta:
-</p>
+<div class="section-title">🎯 Din första uppgift</div>
 
-<ul>
-<li>Frekvens</li>
-<li>Språk</li>
-<li>Musik eller tal</li>
-</ul>
+<p>Öppna en SDR-mottagare och lyssna på en station.</p>
+
+<p>Försök ta reda på:</p>
+
+<div class="line">👉 Frekvens</div>
+<div class="line">👉 Språk</div>
+<div class="line">👉 Musik eller tal</div>
 </div>
 
 <div class="card">
-<h2>Tips</h2>
-<p>
-Lyssna lugnt. Stressa inte. Bra DX tar tid.
-</p>
+<div class="section-title">💡 Tips</div>
+
+<p>Stressa inte. Stanna kvar på stationen.</p>
+
+<p>Riktig DX handlar om tålamod.</p>
 </div>
 
 <button onclick="window.location.href='lektion2.html'">
-Gå till Lektion 2 →
+Gå till Uppgift 2 →
 </button>
 
 </div>
