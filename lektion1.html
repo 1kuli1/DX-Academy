@@ -8,52 +8,64 @@
 
 <style>
 body {
-  font-family: Arial;
-  background:#0b0f1a;
-  color:white;
-  margin:0;
-  padding:20px;
+    font-family: Arial, sans-serif;
+    background: #0b0f14; /* samma mörka som övriga */
+    color: white;
+    margin: 0;
+    padding: 20px;
 }
 
+/* Wrapper */
 .container {
-  max-width:900px;
-  margin:auto;
+    max-width: 900px;
+    margin: auto;
 }
 
-h1, h2 {
-  color:#38bdf8;
+/* Rubriker */
+h1 {
+    text-align: center;
+    color: #38bdf8;
 }
 
+h2 {
+    color: #facc15; /* GUL istället för grön */
+    margin-top: 30px;
+}
+
+/* Kort */
 .card {
-  background:#38BDF8;
-  padding:20px;
-  border-radius:12px;
-  margin-top:20px;
+    background: #111821;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 20px;
 }
 
+/* Text */
+p {
+    line-height: 1.6;
+}
+
+/* Lista */
+ul {
+    padding-left: 20px;
+}
+
+/* Knapp */
 button {
-  width:25%;
-  padding:15px;
-  margin-top:10px;
-  border-radius:10px;
-  border:none;
-  background:#eab308;
-  font-weight:bold;
-  font-size:16px;
+    width: 100%;
+    padding: 14px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 10px;
+    background: #facc15; /* GUL knapp */
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
 }
 
-.link-btn {
-  display:block;
-  text-align:center;
-  background:#22c55e;
-  padding:15px;
-  border-radius:10px;
-  margin-top:15px;
-  text-decoration:none;
-  color:black;
-  font-weight:bold;
+button:hover {
+    background: #fde047; /* ljusare gul hover */
 }
-
 </style>
 </head>
 
@@ -61,74 +73,51 @@ button {
 
 <div class="container">
 
-<h1>🎧 DX Academy – UPPGIFT 1</h1>
+<h1>Lektion 1 – Introduktion till DX</h1>
 
 <div class="card">
-<h2>🌍 Vad är DX?</h2>
+<h2>Vad du ska lära dig</h2>
+<ul>
+<li>Vad DX är</li>
+<li>Hur du lyssnar på radio</li>
+<li>Vad en frekvens är</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Vad är DX?</h2>
 <p>
-DX är konsten att lyssna på radiosignaler från långa avstånd.
-Det handlar om nyfikenhet, tålamod och upptäckarglädje.
+DX betyder att lyssna på radiosignaler från långt bort.
+Ju längre bort signalen kommer ifrån – desto bättre DX.
 </p>
 </div>
 
 <div class="card">
-<h2>📡 Starta mottagaren</h2>
-
-<a class="link-btn" href="http://websdr.ewi.utwente.nl:8901/?tune 198khz" target="_blank">
-👉 Öppna SDR-mottagare (Twente)
-</a>
-
-</div>
-
-<div class="card">
-<h2>📻 Långvåg</h2>
-
-<button onclick=" href="http://websdr.ewi.utwente.nl:8901/?tune 198khz">Lyssna på 198 kHz</button>
-<button onclick="setFreq(225)">Lyssna på 225 kHz</button>
-<button onclick="setFreq(183)">Lyssna på 183 kHz</button>
-
-</div>
-
-<div class="card">
-<h2>📻 Mellanvåg</h2>
-
-<button onclick="setFreq(693)">Lyssna på 693 kHz</button>
-<button onclick="setFreq(855)">Lyssna på 855 kHz</button>
-<button onclick="setFreq(756)">Lyssna på 756 kHz</button>
-
-</div>
-
-<div class="card">
-<h2>🌍 Kortvåg</h2>
-
-<button onclick="setFreq(6030)">Lyssna på 6030 kHz</button>
-<button onclick="setFreq(6175)">Lyssna på 6175 kHz</button>
-<button onclick="setFreq(6070)">Lyssna på 6070 kHz</button>
-
-</div>
-
-<div class="card">
-<h2>🧠 Uppgift</h2>
-
+<h2>Din första uppgift</h2>
 <p>
-När du har lyssnat:
-<br><br>
-- Vad hörde du?<br>
-- Vilken frekvens?<br>
-- Vilken tid (UTC)?<br>
-- Hur kändes det?
+Öppna en SDR-mottagare och lyssna på en station.
+Försök hitta:
 </p>
 
+<ul>
+<li>Frekvens</li>
+<li>Språk</li>
+<li>Musik eller tal</li>
+</ul>
 </div>
 
+<div class="card">
+<h2>Tips</h2>
+<p>
+Lyssna lugnt. Stressa inte. Bra DX tar tid.
+</p>
 </div>
 
-<script>
-// enkel funktion för att visa vald frekvens
-function setFreq(freq){
-  alert("Ställ in frekvens: " + freq + " kHz i mottagaren");
-}
-</script>
+<button onclick="window.location.href='lektion2.html'">
+Gå till Lektion 2 →
+</button>
+
+</div>
 
 </body>
 </html>
