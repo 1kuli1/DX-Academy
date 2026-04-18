@@ -3,63 +3,51 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>DX Academy – Uppgift 1</title>
 
 <style>
 body {
     font-family: Arial, sans-serif;
-    background: #020617; /* mörkare bakgrund */
+    background: #020617;
     color: white;
     margin: 0;
-    padding: 20px;
+    padding: 15px;
 }
 
-/* Wrapper */
 .container {
     max-width: 900px;
     margin: auto;
 }
 
-/* HEADER */
 .header {
-    font-size: 34px;
+    font-size: 28px;
     font-weight: bold;
     color: #facc15;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
-/* Kort */
 .card {
     background: #0f172a;
-    padding: 25px;
-    border-radius: 20px;
-    margin-bottom: 25px;
-    line-height: 1.7;
+    padding: 20px;
+    border-radius: 18px;
+    margin-bottom: 20px;
+    line-height: 1.6;
 }
 
-/* Sektionstitel */
 .section-title {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: bold;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 
-/* Lista */
-ul {
-    padding-left: 20px;
-}
-
-/* Emojis spacing */
 .line {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
-/* Knapp */
 button {
     width: 100%;
-    padding: 16px;
-    border-radius: 12px;
+    padding: 14px;
+    border-radius: 10px;
     border: none;
     background: #facc15;
     color: black;
@@ -70,6 +58,40 @@ button {
 
 button:hover {
     background: #fde047;
+}
+
+.small-btn {
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
+    display: block;
+}
+
+@media (max-width: 600px) {
+    .header {
+        font-size: 22px;
+    }
+    .section-title {
+        font-size: 18px;
+    }
+    button {
+        font-size: 15px;
+        padding: 12px;
+    }
+}
+
+.ai-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #38bdf8;
+    color: black;
+    font-size: 22px;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    z-index: 999;
 }
 </style>
 </head>
@@ -84,11 +106,8 @@ button:hover {
 
 <div class="card">
 <p>DX betyder att lyssna på radiosignaler från långt bort.</p>
-
 <p>Ju längre bort signalen kommer ifrån – desto bättre DX.</p>
-
 <p>Tänk dig radio som en värld du kan upptäcka med öronen.</p>
-
 <p>Varje station du hittar är som ett nytt land.</p>
 </div>
 
@@ -96,61 +115,50 @@ button:hover {
 <div class="section-title">🎯 Din första uppgift</div>
 
 <p>Öppna Twente SDR-mottagare och lyssna på en station.</p>
-<div class="card">
-    <h2>🎧 Lyssna här</h2>
-    
-    <a href="http://websdr.ewi.utwente.nl:8901/" target="_blank">
-        <button style="width:25%; padding:15px; font-size:18px; background:#ffcc00; border:none; border-radius:10px; cursor:pointer;">
-            Öppna WebSDR Twente
-        </button>
-    </a>
 
-</div>
+<a href="http://websdr.ewi.utwente.nl:8901/" target="_blank">
+<button class="small-btn">
+🎧 Öppna WebSDR Twente
+</button>
+</a>
+
 <p>Försök ta reda på:</p>
 
 <div class="line">👉 Frekvens</div>
 <div class="line">👉 Språk</div>
 <div class="line">👉 Musik eller tal</div>
+
 </div>
 
 <div class="card">
 <div class="section-title">💡 Tips</div>
-
 <p>Stressa inte. Stanna kvar på stationen.</p>
-
 <p>Riktig DX handlar om tålamod.</p>
 </div>
 
+<div class="card">
+<h2>📋 Skicka in dina svar</h2>
 
+<iframe 
+src="https://docs.google.com/forms/d/e/1FAIpQLSdT1gJGI3FdkoXtgovOKQI-hkBRTkXO0HXgapz_DAI-92xt3Q/viewform?usp=sharing"
+width="100%"
+height="800"
+style="border:none;">
+</iframe>
 
+</div>
+
+<button onclick="window.location.href='lektion2.html'">
+Gå till Uppgift 2 →
+</button>
+
+</div>
+
+<div class="ai-button" onclick="window.open('https://chat.openai.com','_blank')">
+🤖
 </div>
 
 </body>
 </html>
-<div class="container">
 
-    <!-- Dina befintliga uppgifter -->
-    <div class="card">
-        <h2>Uppgift 1</h2>
-        <p>Lyssna på en station...</p>
-    </div>
 
-    <!-- 👇 LÄGG FORMULÄRET HÄR (längst ner) -->
-    <div class="card">
-        <h2>📋 Skicka in dina svar</h2>
-
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdT1gJGI3FdkoXtgovOKQI-hkBRTkXO0HXgapz_DAI-92xt3Q/viewform?usp=sharing&ouid=109891876112500487220"
-        width="100%"
-        height="900"
-        frameborder="0">
-        </iframe>
-
-        <p style="margin-top:10px;">
-            Fungerar det inte? Maila till oss
-                <a href="mailto:dinmail@exempel.se?subject=DX Academy - Fråga">
-        </p>
-    </div>
-<button onclick="window.location.href='lektion2.html'">
-Gå till Uppgift 2 →
-</button>
-</div>
