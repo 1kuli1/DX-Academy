@@ -2,208 +2,129 @@
 <html lang="sv">
 <head>
 <meta charset="UTF-8">
-<title>DX SYSTEM</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DX Academy</title>
 
 <style>
 body {
-    font-family: Arial, sans-serif;
-    background: #0b0f14;
-    color: #fff;
-    margin: 0;
-    display: flex;
-    justify-content: center;
+    margin:0;
+    font-family:Arial;
+    background:#0b0f1a;
+    color:white;
+    text-align:center;
 }
 
-/* Wrapper för centrering */
-.wrapper {
-    width: 100%;
-    max-width: 900px;
+.header {
+    background:#111821;
+    padding:20px;
+    font-size:26px;
+    color:#eab308;
+    font-weight:bold;
 }
 
-/* Header */
-header {
-    background: #111821;
-    padding: 20px;
-    text-align: center;
-    font-size: 28px;
-}
-
-/* Välkomsttext */
-#welcome {
-    text-align: center;
-    font-size: 22px;
-    margin-top: 15px;
-    color: #9ecfff;
-}
-
-/* Tidrad */
-.timebar {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    background: #16202a;
-    padding: 15px;
-    font-size: 18px;
-    flex-wrap: wrap;
-}
-
-/* Knappar */
 .container {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    padding: 60px 20px;
-    flex-wrap: wrap;
+    max-width:800px;
+    margin:auto;
+    padding:20px;
 }
 
-.button {
-    padding: 30px 50px;
-    font-size: 20px;
-    border-radius: 12px;
-    border: none;
-    cursor: pointer;
-    transition: 0.3s;
-    min-width: 240px;
+.card {
+    background:#111827;
+    padding:20px;
+    border-radius:15px;
+    margin-bottom:20px;
 }
 
-.academy { background: #1e90ff; }
-.os { background: #28a745; }
-.test { background: #ff9800; }
-.ai { background: #9c27b0; }
-
-.button:hover {
-    transform: scale(1.05);
-    opacity: 0.9;
+button {
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    background:#eab308;
+    font-weight:bold;
+    cursor:pointer;
+    margin-top:10px;
 }
 
-/* MOBIL */
-@media (max-width: 600px) {
-
-    .container {
-        gap: 20px;
-        padding: 40px 15px;
-    }
-
-    .button {
-        width: 100%;
-        max-width: 320px;
-        padding: 20px;
-        font-size: 18px;
-    }
-
-    .timebar {
-        gap: 10px;
-        font-size: 16px;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    header {
-        font-size: 22px;
-    }
-
-    #welcome {
-        font-size: 18px;
-    }
+.locked {
+    background:#374151;
+    color:#9ca3af;
 }
 
+.price {
+    margin-top:10px;
+    font-size:14px;
+    color:#9ca3af;
+}
+
+.ai-btn {
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background:#eab308;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+    cursor:pointer;
+}
 </style>
-
 </head>
 
 <body>
 
-<div class="wrapper">
-
-<header>
-DX SYSTEM DASHBOARD
-</header>
-
-<div id="welcome"></div>
-
-<div class="timebar">
-    <div id="date"></div>
-    <div id="localTime"></div>
-    <div id="utcTime"></div>
+<div class="header">
+DX Academy
 </div>
 
 <div class="container">
 
-    <button class="button academy" onclick="location.href='academy-start1.html'">
-        🎓 DX Academy
-    </button>
+<div class="card">
+<h2>🟢 Nybörjare (Gratis)</h2>
+<p>Starta här och lär dig grunderna i DX steg för steg.</p>
+<button onclick="go('nyborjare/start.html')">Starta kurs</button>
+</div>
 
-    <button class="button ai" onclick="openAI()">
-        🤖 DX AI Assistent
-    </button>
+<div class="card">
+<h2>🔵 Fortsättning</h2>
+<p>Fördjupa dina kunskaper och börja analysera signaler.</p>
+<button class="locked" onclick="locked()">Låst</button>
+<div class="price">Pris: 299 kr</div>
+</div>
 
+<div class="card">
+<h2>🔴 Avancerad</h2>
+<p>Djup analys och riktig stationidentifiering.</p>
+<button class="locked" onclick="locked()">Låst</button>
+<div class="price">Pris: 499 kr</div>
+</div>
+
+<div class="card">
+<h2>🟣 Signalist</h2>
+<p>Från DX-lyssnare till signalanalytiker.</p>
+<button class="locked" onclick="locked()">Låst</button>
+<div class="price">Pris: 799 kr</div>
 </div>
 
 </div>
+
+<div class="ai-btn" onclick="openAI()">🤖</div>
 
 <script>
-
-// ===== TID =====
-const locale = navigator.language;
-
-function updateTime() {
-    const now = new Date();
-
-    document.getElementById("date").innerText =
-        now.toLocaleDateString(locale, {
-            weekday: 'long',
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric'
-        });
-
-    document.getElementById("localTime").innerText =
-        "Lokal: " + now.toLocaleTimeString(locale);
-
-    document.getElementById("utcTime").innerText =
-        "UTC: " + now.toUTCString().split(" ")[4];
+function go(link){
+    window.location.href = link;
 }
 
-// ===== VÄLKOMST =====
-function updateWelcome() {
-
-    const now = new Date();
-    const hour = now.getHours();
-    const lang = navigator.language;
-
-    let greeting = "";
-
-    if (lang.startsWith("sv")) {
-
-        if (hour < 10) greeting = "God morgon";
-        else if (hour < 17) greeting = "God dag";
-        else greeting = "God kväll";
-
-        greeting += " – redo att utforska världen via radio?";
-    }
-
-    else {
-
-        if (hour < 10) greeting = "Good morning";
-        else if (hour < 17) greeting = "Good day";
-        else greeting = "Good evening";
-
-        greeting += " – ready to explore the world?";
-    }
-
-    document.getElementById("welcome").innerText = greeting;
+function locked(){
+    alert("Denna kurs är låst. Kontakta för tillgång.");
 }
 
-// ===== AI KNAPP =====
-function openAI() {
-    window.open("https://chat.openai.com", "_blank");
+function openAI(){
+    window.open("https://chat.openai.com/", "_blank");
 }
-
-// Starta allt
-updateTime();
-updateWelcome();
-setInterval(updateTime, 1000);
-
 </script>
 
 </body>
