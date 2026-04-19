@@ -49,29 +49,23 @@ button { width:100%; padding:12px; margin-top:10px; border:none; border-radius:1
 <div class="container">
     <div class="card">
         <h1>Nybörjare – Lektion 1: Vad är DX?</h1>
-        
-<p>DX betyder att du lyssnar efter radiostationer som sänder långt bort. Ibland hör du något tydligt, ibland svagt, och det är just det som gör DX spännande.</p>
-<p>Målet här är inte att kunna allt direkt. Målet är att börja lyssna och förstå hur radio känns i praktiken.</p>
-
+        <p>DX betyder att du lyssnar efter radiostationer som sänder långt bort. Ibland hör du något tydligt, ibland svagt, och det är just det som gör DX spännande.</p>
+        <p>Målet här är inte att kunna allt direkt. Målet är att börja lyssna och förstå hur radio känns i praktiken.</p>
     </div>
 
     <div class="card">
         <h2>Uppgift</h2>
-        
-<ul>
-<li>Öppna din mottagare eller SDR.</li>
-<li>Lyssna i några minuter på en station.</li>
-<li>Skriv ner om du hör musik, prat eller brus.</li>
-<li>Skriv också om signalen känns stark eller svag.</li>
-</ul>
-
+        <ul>
+            <li>Öppna din mottagare eller SDR.</li>
+            <li>Lyssna i några minuter på en station.</li>
+            <li>Skriv ner om du hör musik, prat eller brus.</li>
+            <li>Skriv också om signalen känns stark eller svag.</li>
+        </ul>
     </div>
 
     <div class="card">
         <h2>Tips</h2>
-        
-<p>Börja enkelt. Du behöver inte veta vilken station det är ännu. Det viktigaste i början är att våga lyssna och lägga märke till vad du hör.</p>
-
+        <p>Börja enkelt. Du behöver inte veta vilken station det är ännu. Det viktigaste i början är att våga lyssna och lägga märke till vad du hör.</p>
     </div>
 
     <div class="nav">
@@ -84,12 +78,16 @@ button { width:100%; padding:12px; margin-top:10px; border:none; border-radius:1
 
 <script>
 function prevLesson() {
-    alert("Detta är första lektionen");
+    window.location.href = "start.html";
 }
+
 function nextLesson() {
-    window.location.href="lektion2.html";
+    window.location.href = "lektion2.html";
 }
-function openAI() { window.open("https://chat.openai.com/", "_blank"); }
+
+function openAI() {
+    window.open("https://chat.openai.com/", "_blank");
+}
 </script>
 
 </body>
