@@ -6,6 +6,11 @@
 <title>DX Academy</title>
 
 <style>
+*{box-sizing:border-box}
+.skip-link{position:absolute;left:-9999px;top:6px;z-index:10001;background:white;color:black;padding:10px 14px;border-radius:8px;font-weight:bold}
+.skip-link:focus{left:8px}
+a:focus-visible,button:focus-visible{outline:3px solid white;outline-offset:3px}
+
 body {
     margin:0;
     font-family:Arial;
@@ -21,6 +26,8 @@ body {
     color:#eab308;
     font-weight:bold;
 }
+
+ .header h1{margin:0;font:inherit;color:inherit}
 
 .container {
     max-width:800px;
@@ -105,45 +112,46 @@ button {
 </head>
 
 <body>
+<a class="skip-link" href="#main-content">Hoppa till huvudinnehåll</a>
 
-<div class="topnav"><a class="help-link" href="https://1kuli1.github.io/dX-START/asta.html" target="_blank" rel="noopener">🤖 ASTA</a><a class="help-link" href="https://1kuli1.github.io/dX-START/dx-help.html#academy" target="_blank" rel="noopener">❓ HJÄLP</a><a class="central-link" href="https://1kuli1.github.io/dx-system/">← TILLBAKA TILL DX CENTRALEN</a></div>
+<nav class="topnav" aria-label="DX Academy-navigation"><a class="help-link" href="https://1kuli1.github.io/dX-START/asta.html" target="_blank" rel="noopener">🤖 ASTA</a><a class="help-link" href="https://1kuli1.github.io/dX-START/dx-help.html#academy" target="_blank" rel="noopener">❓ HJÄLP</a><a class="central-link" href="https://1kuli1.github.io/dx-system/">← TILLBAKA TILL DX CENTRALEN</a></nav>
 
-<div class="header">
-DX Academy
-</div>
+<header class="header">
+<h1>DX Academy</h1>
+</header>
 
-<div class="container">
+<main class="container" id="main-content">
 
 <div class="card">
 <h2>🟢 Nybörjare (Gratis)</h2>
 <p>Starta här och lär dig grunderna i DX steg för steg.</p>
-<button onclick="startCourse()">Starta kurs</button>
+<button type="button" onclick="startCourse()">Starta kurs</button>
 </div>
 
 <div class="card">
 <h2>🔵 Fortsättning</h2>
 <p>Fördjupa dina kunskaper och börja analysera signaler.</p>
-<button class="locked" onclick="locked()">Låst</button>
+<button type="button" class="locked" onclick="locked()">Låst</button>
 <div class="price">Pris: 299 kr</div>
 </div>
 
 <div class="card">
 <h2>🔴 Avancerad</h2>
 <p>Djup analys och riktig stationidentifiering.</p>
-<button class="locked" onclick="locked()">Låst</button>
+<button type="button" class="locked" onclick="locked()">Låst</button>
 <div class="price">Pris: 499 kr</div>
 </div>
 
 <div class="card">
 <h2>🟣 Signalist</h2>
 <p>Från DX-lyssnare till signalanalytiker.</p>
-<button class="locked" onclick="locked()">Låst</button>
+<button type="button" class="locked" onclick="locked()">Låst</button>
 <div class="price">Pris: 799 kr</div>
 </div>
 
-</div>
+</main>
 
-<div class="ai-btn" onclick="window.open('https://1kuli1.github.io/dX-START/asta.html','_blank')">Asta</div>
+<a class="ai-btn" href="https://1kuli1.github.io/dX-START/asta.html" target="_blank" rel="noopener noreferrer" aria-label="Öppna Asta, DX-assistent">Asta</a>
 
 <script>
 function startCourse(){
