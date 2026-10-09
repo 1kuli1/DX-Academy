@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
+
 <meta charset="UTF-8">
 <title>DX AI Nivå 1</title>
 
@@ -57,6 +58,7 @@ button {
 </head>
 
 <body>
+<nav aria-label="DX Academy stöd" style="padding:10px;text-align:right"><a href="https://1kuli1.github.io/dX-START/asta.html?from=academy" target="_blank" rel="noopener noreferrer" style="display:inline-block;padding:9px 13px;background:#eab308;color:#111;border-radius:8px;font-weight:700">🤖 Fråga Asta</a></nav>
 
 <h1>DX AI – Nivå 1</h1>
 
@@ -64,10 +66,10 @@ button {
 <div class="container">
 <h2>Identifiera station</h2>
 
-<input id="freq" placeholder="Frekvens (kHz)">
-<input id="utc" placeholder="UTC">
-<input id="lang" placeholder="Språk">
-<textarea id="obs" placeholder="Vad hör du?"></textarea>
+<input id="freq" aria-label="Frekvens kHz" placeholder="Frekvens (kHz)">
+<input id="utc" aria-label="UTC" placeholder="UTC">
+<input id="lang" aria-label="Språk" placeholder="Språk">
+<textarea id="obs" aria-label="Observationer" placeholder="Vad hör du?"></textarea>
 
 <br>
 <button onclick="utcNow()">UTC nu</button>
@@ -80,7 +82,7 @@ button {
 <div class="container">
 <h2>Störning / signal</h2>
 
-<select id="type">
+<select id="type" aria-label="Typ av störning">
 <option value="">Välj typ</option>
 <option>Brus</option>
 <option>Fading</option>
@@ -89,7 +91,7 @@ button {
 <option>Interferens</option>
 </select>
 
-<textarea id="desc" placeholder="Beskrivning"></textarea>
+<textarea id="desc" aria-label="Beskrivning" placeholder="Beskrivning"></textarea>
 
 <button onclick="interferenceAI()">Till fri AI</button>
 
@@ -100,7 +102,7 @@ button {
 <div class="container">
 <h2>Egen fråga</h2>
 
-<textarea id="question" placeholder="Skriv din fråga"></textarea>
+<textarea id="question" aria-label="Egen fråga" placeholder="Skriv din fråga"></textarea>
 
 <button onclick="questionAI()">Till fri AI</button>
 
@@ -116,8 +118,8 @@ function utcNow(){
 }
 
 function openAI(text){
-    navigator.clipboard.writeText(text);
-    window.open("https://chat.openai.com","_blank");
+    navigator.clipboard?.writeText(text).catch(()=>{});
+    window.open("https://chatgpt.com/","_blank","noopener");
 }
 
 function stationAI(){
@@ -141,3 +143,4 @@ function questionAI(){
 
 </body>
 </html>
+
